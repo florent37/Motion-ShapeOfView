@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/collapsing_header_diagonal"
+        app:showPaths="false"
+        android:background="@color/colorBackground"
+        tools:showPaths="true">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+    <com.github.florent37.shapeofview.shapes.DiagonalView
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_diagonal_direction="right"
+            app:shape_diagonal_position="bottom"
+            >
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:alpha="0.7"
+                app:srcCompat="@drawable/effeil_tower2"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:background="@drawable/radial" />
+
+    </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="23sp"
+            android:elevation="4dp"
+            android:gravity="center_vertical|left"
+            android:text="I love paris"
+            android:shadowColor="#3E3E3E"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textColor="@android:color/white"
+            app:fontFamily="@font/vogue"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
