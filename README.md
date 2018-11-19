@@ -11,4 +11,4 @@ https://github.com/florent37/ShapeOfView
 
 # Fiches Plateau Moto
 
-Utilisé dans l'application fiches plateau moto https://www.fiches-plateau-moto.fr/
+Utilisé dans l'application de révisions de permis moto, fiches plateau moto https://www.fiches-plateau-moto.fr/
