@@ -21,7 +21,7 @@ dependencies {
 
 https://github.com/florent37/Motion-ShapeOfView/blob/master/app/src/main/res/layout/activity_arc_list.xml
 
-```
+```xml
 <androidx.constraintlayout.motion.widget.MotionLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -61,7 +61,7 @@ https://github.com/florent37/Motion-ShapeOfView/blob/master/app/src/main/res/lay
 
 https://github.com/florent37/Motion-ShapeOfView/blob/master/app/src/main/res/xml/collapsing_header_arc.xml
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
