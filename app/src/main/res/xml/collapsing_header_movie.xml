@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+            app:constraintSetEnd="@id/end"
+            app:constraintSetStart="@id/start">
+
+        <OnSwipe
+                app:dragDirection="dragUp"
+                app:touchAnchorId="@id/layout"
+                app:touchAnchorSide="top"/>
+
+        <KeyFrameSet>
+            <KeyPosition
+                    app:target="@id/image"
+                    app:percentY="0.85"
+                    app:framePosition="20"/>
+            <KeyPosition
+                    app:target="@id/image"
+                    app:percentY="0.6"
+                    app:framePosition="40"/>
+            <KeyAttribute
+                    app:target="@id/image"
+                    app:framePosition="40">
+                <CustomAttribute
+                        app:attributeName="elevation"
+                        app:customDimension="3dp"/>
+
+            </KeyAttribute>
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+                android:id="@id/layout"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+
+                android:layout_marginTop="240dp">
+
+        </Constraint>
+
+        <Constraint
+                android:id="@id/image"
+
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+
+                android:layout_marginStart="32dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout"
+                app:layout_constraintBottom_toTopOf="@+id/layout"
+                >
+
+            <CustomAttribute
+                    app:attributeName="elevation"
+                    app:customDimension="6dp"/>
+
+
+        </Constraint>
+
+        <Constraint
+                android:id="@id/text"
+
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="16dp"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toTopOf="@+id/layout"
+                app:layout_constraintEnd_toEndOf="@+id/layout"
+                app:layout_constraintStart_toEndOf="@+id/image">
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+                android:id="@id/layout"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+
+                android:layout_marginTop="100dp">
+        </Constraint>
+        <Constraint
+                android:id="@id/image"
+
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+
+                android:layout_marginStart="32dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout"
+                app:layout_constraintBottom_toTopOf="@+id/layout"
+                >
+
+            <CustomAttribute
+                    app:attributeName="elevation"
+                    app:customDimension="3dp"/>
+
+
+        </Constraint>
+        <Constraint
+                android:id="@id/text"
+
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintTop_toTopOf="@+id/layout"
+                app:layout_constraintEnd_toEndOf="@+id/layout"
+                app:layout_constraintStart_toStartOf="@+id/layout"
+                >
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>
