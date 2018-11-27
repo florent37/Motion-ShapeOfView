@@ -8,7 +8,7 @@ https://github.com/florent37/ShapeOfView
 
 ```
 dependencies {
-    implementation 'com.github.florent37:shapeofview:1.4.4'
+    implementation 'com.github.florent37:shapeofview:1.4.6'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
 }
 ```
